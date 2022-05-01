@@ -21,7 +21,11 @@
 
         </div>
           <div class="col-md-8">
-               <router-view />
+               <router-view  v-slot="{Component, route}">
+                 <transition :name="route.meta.transition ">
+                   <component :is="Component" />
+                 </transition>
+               </router-view>
           </div>
       </div>
       <about-pagination  class="fixed-bottom"/>
@@ -58,3 +62,14 @@ export default {
   
 }
 </script>
+<style lang="scss" scoped>
+.ts-fade-enter-active,
+.ts-fade-enter-active{
+  transition: all 0.3s ease-out;
+}
+.ts-fade-enter-from,
+.ts-fade-leaveto{
+  opacity: 0;
+  // transform: scale(3)
+}
+</style>

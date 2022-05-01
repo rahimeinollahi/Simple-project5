@@ -14,6 +14,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
     children:[
       {
+        path:'',
+        component: () => import(/* webpackChunkName: "DefaultAbout" */ '../views/DefaultAbout.vue'),
+        meta:'ts-fade'
+      },
+      {
         path: 'aboutpage1',
         name: 'Aboutpage1',
         // route level code-splitting

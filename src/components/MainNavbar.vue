@@ -1,6 +1,6 @@
 <template>
     <div class="container-fluid mt-3">
-        <ul class="nav nav-tabs justify-content-center"> 
+        <ul class="nav nav-tabs justify-content-center fixed-top"> 
             <div  v-for="item in navbarItems" :key="item.id">
                 <li class="nav-item" v-if="item.id!=5">
                     <router-link class="nav-link" :to="item.routePath">{{item.routeName}}</router-link>

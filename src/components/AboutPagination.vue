@@ -15,8 +15,10 @@
             return{
                 pgnItems:[
                     {id:1, pagName:'Previous',pgnRoute:"/about"},
-                    {id:1, pagName:'1',pgnRoute:"/about/aboutpage1"},
-                    {id:1, pagName:'2',pgnRoute:"/about/aboutpage2"},
+                    {id:1, pagName:'1',pgnRoute:"/about/skills"},
+                    {id:1, pagName:'2',pgnRoute:"/about/city"},
+                    {id:1, pagName:'3',pgnRoute:"/about/registeruser"},
+                    {id:1, pagName:'4',pgnRoute:"/about/propofme"},
                     {id:4, pagName:'next',pgnRoute:"/about"},
                 ]
             }
