@@ -46,6 +46,12 @@ const routes = [
         name:'Certificate',
         component: () => import(/* webpackChunkName: "city" */ '../views/Certificate.vue'),
         meta:'ts-fade'
+      },
+      {
+        path:'propofme',
+        name:'Propofme',
+        component: () => import(/* webpackChunkName: "propofme" */ '../views/PropofMe.vue'),
+        meta:'ts-fade'
       }
     ]
   },
