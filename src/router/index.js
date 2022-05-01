@@ -10,11 +10,46 @@ const routes = [
   {
     path: '/about',
     name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+    meta:{transition:'ts-about'},
+    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+    children:[
+      {
+        path: 'aboutpage1',
+        name: 'Aboutpage1',
+        // route level code-splitting
+        // which is lazy-loaded when the route is visited.
+        component: () => import(/* webpackChunkName: "aboutPage1" */ '../views/AboutPage1.vue')
+      },
+      {
+        path: 'aboutpage2',
+        name: 'Aboutpage2',
+        // route level code-splitting
+        // which is lazy-loaded when the route is visited.
+        component: () => import(/* webpackChunkName: "aboutPage2" */ '../views/AboutPage2.vue')
+      },
+      {
+        path: 'skills',
+        name: 'Skills',
+        // route level code-splitting
+        // which is lazy-loaded when the route is visited.
+        component: () => import(/* webpackChunkName: "Skills" */ '../views/Skills.vue'),
+        meta:{transition:'ts-about'}
+      },
+      {
+        path:'city',
+        name:'City',
+        component: () => import(/* webpackChunkName: "city" */ '../views/City.vue'),
+        meta:'ts-fade'
+      },
+      {
+        path:'certificate',
+        name:'Certificate',
+        component: () => import(/* webpackChunkName: "city" */ '../views/Certificate.vue'),
+        meta:'ts-fade'
+      }
+    ]
+  },
+  
 ]
 
 const router = createRouter({

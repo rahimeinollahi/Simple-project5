@@ -2,7 +2,11 @@
   <div id="nav">
     <main-navbar />
   </div>
-  <router-view/>
+  <router-view v-slot="{Component, route}">
+      <transition :name="route.meta.transition || 'bounce'">
+          <component :is="Component"/>
+      </transition>
+  </router-view>
 </template>
 
 <script>
@@ -32,6 +36,49 @@ export default {
     &.router-link-exact-active {
       color: #42b983;
     }
+  }
+}
+.ts-about-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.ts-about-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.ts-about-enter-from,
+.ts-about-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
+.ts-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.ts-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.ts-fade-enter-from,
+.ts-fade-leave-to {
+  transform: scale(2);
+    opacity: 0;
+}
+.bounce-enter-active {
+  animation: bounce-in 0.5s;
+}
+.bounce-leave-active {
+  animation: bounce-in 0.5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 </style>
