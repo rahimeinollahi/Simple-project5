@@ -1,5 +1,18 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="container-fluid mt-3">
+    <div class="border">
+
+      <about-pagination />
+    </div>
   </div>
 </template>
+
+<script>
+import AboutPagination from '../components/AboutPagination.vue'
+export default {
+  components:{
+    AboutPagination
+    
+  }
+}
+</script>
