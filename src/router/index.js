@@ -52,6 +52,12 @@ const routes = [
         name:'Propofme',
         component: () => import(/* webpackChunkName: "propofme" */ '../views/PropofMe.vue'),
         meta:'ts-fade'
+      },
+      {
+        path:'registeruser',
+        name:'Registeruser',
+        component: () => import(/* webpackChunkName: "registeruser" */ '../views/RegisterUser.vue'),
+        meta:'ts-fade'
       }
     ]
   },

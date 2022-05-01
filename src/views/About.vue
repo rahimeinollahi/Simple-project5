@@ -43,7 +43,7 @@ export default {
           {id:1,nameItem:'Ctiy',pathRoute:'/about/city'},
           {id:1,nameItem:'Certificat',pathRoute:'/about/certificate'},
           {id:1,nameItem:'Prop of me',pathRoute:'/about/propofme'},
-          {id:1,nameItem:'Register Survey',pathRoute:'/about/reigstersurvey'},
+          {id:1,nameItem:'Register Survey',pathRoute:'/about/registeruser'},
 
         ],
        
