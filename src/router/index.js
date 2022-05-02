@@ -3,6 +3,12 @@ import Home from '../views/Home.vue'
 
 const routes = [
   {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: () => import(/* webpackChunkName: "notfound" */ '../views/NotFound.vue'),
+
+  },
+  {
     path: '/',
     name: 'Home',
     component: Home
