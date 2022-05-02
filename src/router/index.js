@@ -8,6 +8,12 @@ const routes = [
     component: Home
   },
   {
+    path: '/vuejs',
+    name: 'Vuejs',
+   component: () => import(/* webpackChunkName: "vuejs" */ '../views/Vuejs.vue'),
+
+  },
+  {
     path: '/about',
     name: 'About',
     meta:{transition:'ts-about'},

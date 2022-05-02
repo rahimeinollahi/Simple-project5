@@ -34,9 +34,10 @@
                             {id:5, routeName:'Products',routePath:
                                                             [
                                                                 {id:51, routeName:'SoftWare',routePath:'/software',className:'nav-link'},
-                                                                {id:52, routeName:'Hardware',routePath:'/hardware',className:'nav-link'},
-                                                                {id:53, routeName:'Mis',routePath:'/mis',className:'nav-link'},
+                                                                {id:52, routeName:'Hardware',routePath:'/',className:'nav-link'},
+                                                                {id:53, routeName:'Mis',routePath:'/',className:'nav-link'},
                                                             ]},
+                            {id:6, routeName:'/vuejs',routePath:'/vuejs',className:'nav-link bg-success text-white'}
         ]
            }
        }
