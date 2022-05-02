@@ -66,6 +66,18 @@ const routes = [
       }
     ]
   },
+  {
+    path:'/supportpage',
+    name:'Supportpage',
+    component: () => import(/* webpackChunkName: "supportpage" */ '../views/SupportPage.vue'),
+
+  },
+  {
+    path:'/createaccount',
+    name:'createaccount',
+    component: () => import(/* webpackChunkName: "createaccount" */ '../views/CreateRegister.vue'),
+
+  }
   
 ]
 

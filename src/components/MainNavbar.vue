@@ -3,7 +3,7 @@
         <ul class="nav nav-tabs justify-content-center fixed-top"> 
             <div  v-for="item in navbarItems" :key="item.id">
                 <li class="nav-item" v-if="item.id!=5">
-                    <router-link class="nav-link" :to="item.routePath">{{item.routeName}}</router-link>
+                    <router-link :class="item.className" :to="item.routePath" >{{item.routeName}}</router-link>
                 </li>
 
                 <li v-else class="nav-item dropdown">
@@ -26,15 +26,16 @@
        data(){
            return{
                 navbarItems:[
-                            {id:1, routeName:'Home',routePath:'/'},
-                            {id:2, routeName:'About me',routePath:'/about'},
-                            {id:3, routeName:'Support',routePath:'/support'},
-                            {id:4, routeName:'Setting',routePath:'/setting'},
+                            {id:0, routeName:'Create New Account',routePath:'/createaccount',className:'nav-link text-white bg-warning '},
+                            {id:1, routeName:'Home',routePath:'/',className:'nav-link'},
+                            {id:2, routeName:'About me',routePath:'/about',className:'nav-link'},
+                            {id:3, routeName:'Support',routePath:'/supportpage',className:'nav-link'},
+                            {id:4, routeName:'Setting',routePath:'/setting',className:'nav-link'},
                             {id:5, routeName:'Products',routePath:
                                                             [
-                                                                {id:51, routeName:'SoftWare',routePath:'/software'},
-                                                                {id:52, routeName:'Hardware',routePath:'/hardware'},
-                                                                {id:53, routeName:'Mis',routePath:'/mis'},
+                                                                {id:51, routeName:'SoftWare',routePath:'/software',className:'nav-link'},
+                                                                {id:52, routeName:'Hardware',routePath:'/hardware',className:'nav-link'},
+                                                                {id:53, routeName:'Mis',routePath:'/mis',className:'nav-link'},
                                                             ]},
         ]
            }
