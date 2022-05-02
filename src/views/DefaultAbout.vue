@@ -1,6 +1,7 @@
 <template>
-    <div>
-        <h3 id="abouthome">Test about page header</h3>
+    <div data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+        <a href="#end-paragraph" class="nav-link">Go to end paragraph</a>
+        <h3 id="section1">Test about page header</h3>
         <p class="text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae esse voluptatibus iusto ab dignissimos fuga eaque nihil perferendis error ullam sunt eius qui nesciunt, laboriosam unde enim asperiores illum velit!</p>
 
         <pre>
@@ -36,7 +37,8 @@
 
 
         </pre>
-        <a href="#abouthome">home</a>
+        <a href="#">home</a>
+        <p id="end-paragraph">This is end of paragraph</p>
     </div>
 </template>
 
@@ -51,4 +53,5 @@
     background: linear-gradient(to right,rgb(233, 229, 229),rgb(94, 223, 195));
     padding: 5px;
 }
+
 </style>

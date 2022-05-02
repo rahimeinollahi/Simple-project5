@@ -10,13 +10,15 @@
 
             <div class="d-block">
               <button class="btn-block btn-secondary btn" @click="showChange()"> See more</button>
-                <div v-show="showProfile">
-                  <ul class="nav flex-column">
-                    <li class="nav-item" v-for="item in aboutItem" :key="item.id">
-                      <router-link class="nav-link  text-info" :to="item.pathRoute">{{item.nameItem}}</router-link>
-                    </li>
-                  </ul>
-                </div>
+              <transition name="fade-show">
+                  <div v-show="showProfile">
+                    <ul class="nav flex-column">
+                      <li class="nav-item" v-for="item in aboutItem" :key="item.id">
+                        <router-link class="nav-link  text-info" :to="item.pathRoute">{{item.nameItem}}</router-link>
+                      </li>
+                    </ul>
+                  </div>
+              </transition>
             </div>
 
         </div>
@@ -64,12 +66,23 @@ export default {
 </script>
 <style lang="scss" scoped>
 .ts-fade-enter-active,
-.ts-fade-enter-active{
+.ts-fade-leave-active{
   transition: all 0.3s ease-out;
 }
 .ts-fade-enter-from,
-.ts-fade-leaveto{
+.ts-fade-leave-to{
   opacity: 0;
+  // transform: scale(3)
+}
+
+.fade-show-enter-active,
+.fade-show-leave-active{
+  transition: all 0.5s ease-out;
+}
+.fade-show-enter-from,
+.fade-show-leave-to{
+  opacity: 0;
+  transform: scale(2);
   // transform: scale(3)
 }
 </style>
